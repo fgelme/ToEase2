@@ -1,0 +1,34 @@
+package com.runbi.start;
+
+
+import static com.runbi.start.OfyService.ofy;
+import com.google.api.server.spi.config.Api;
+import com.google.api.server.spi.config.ApiMethod;
+import com.google.api.server.spi.config.ApiMethod.HttpMethod;
+
+@Api(name = "logonapi", version = "v10",
+
+scopes = {Constants.EMAIL_SCOPE },
+
+        clientIds = {Constants.WEB_CLIENT_ID, Constants.API_EXPLORER_CLIENT_ID },
+
+        description = "API for Logon Features")
+
+public class RunBiApi {
+	
+@ApiMethod(name = "createUser", path = "createUser", httpMethod = HttpMethod.POST)
+
+public RunBiUsers createUser( UserForm userForm ){
+	
+RunBiUsers runBiUsers = new RunBiUsers( userForm.getUserEmail(), userForm.getUserDisplayName(), userForm.getUserPassword() );	
+
+ofy().save().entity(runBiUsers).now();
+return runBiUsers;
+
+}
+
+}
+
+
+}
+

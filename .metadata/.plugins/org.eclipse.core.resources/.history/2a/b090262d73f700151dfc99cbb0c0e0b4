@@ -1,0 +1,37 @@
+package com.runbi.start;
+
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
+
+
+public class UserForm {
+
+	
+	String userEmail;
+	String userDisplayName;
+	String userPassword;
+
+	
+	public UserForm(){}
+
+
+public UserForm(final String userEmail, final String userDisplayName, final String userPassword)
+{ 
+	this.userEmail = userEmail;
+	this.userDisplayName = userDisplayName;
+	this.userPassword = userPassword;
+	}
+
+public String getUserEmail() {
+return this.userEmail;
+}
+
+public String getUserDisplayName() { 
+return this.userDisplayName;
+}
+
+public String getUserPassword() {
+return this.userPassword;
+}
+
+}

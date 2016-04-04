@@ -1,0 +1,33 @@
+package com.runbi.start;
+
+public class RunBiUsers {
+
+//	@ID
+	String userEmail;
+	String userDisplayName;
+	String userPassword;
+
+	
+	public RunBiUsers(){}
+
+
+public RunBiUsers(final String userEmail, final String userDisplayName, final String userPassword)
+{ 
+	this.userEmail = userEmail;
+	this.userDisplayName = userDisplayName;
+	this.userPassword = userPassword;
+	}
+
+public String getUserEmail() {
+return this.userEmail;
+}
+
+public String getUserDisplayName() { 
+return this.userDisplayName;
+}
+
+public String getUserPassword() {
+return this.userPassword;
+}
+
+}

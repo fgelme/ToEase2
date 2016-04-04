@@ -1,0 +1,15 @@
+package com.runbi.start;
+
+@Api(name = "logonapi", version = "v10",
+
+scopes = {Constants.EMAIL_SCOPE },
+
+        clientIds = {Constants.WEB_CLIENT_ID, Constants.API_EXPLORER_CLIENT_ID },
+
+        description = "API for Logon Features")
+
+public class RunBiApi {
+
+
+}
+
